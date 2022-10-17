@@ -1,0 +1,9 @@
+actor user
+user->browser: Add new note in the form
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser:  HTTP 201 Created
+
+note over browser:
+the browser stays on the same page and 
+doesn't send any more HTTP requests.
+end note
